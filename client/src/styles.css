@@ -9,3 +9,11 @@
 
 /* Keep Settings above hosted preview branding while staying near the lower-right edge. */
 .gear{bottom:72px;z-index:5}
+
+/* Final interaction polish and resilient visual fallbacks. */
+.fallback-icon{display:grid;place-items:center;width:100%;height:100%;border-radius:inherit;color:#e7edff;font-size:22px;font-weight:600;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 80%,#152342),#10182c)}
+.shortcut-tile span img,.admin-row span img{width:26px;height:26px;object-fit:contain;display:block}
+.redirect-help{display:block;text-align:left;color:#9ca9c4;font-size:10px;line-height:1.5;margin:-2px 0 14px}.redirect-help code{display:block;color:#cbd6ed;word-break:break-all;margin-top:5px;padding:7px 8px;border-radius:7px;background:rgba(3,8,18,.5)}
+.gear{opacity:.78!important;bottom:72px!important;right:22px!important;z-index:30!important}.gear:hover,.gear.visible{opacity:1!important}
+.drawer{z-index:20!important}.scrim{z-index:19!important}
+@media(max-width:760px){.drawer{width:min(92vw,410px);right:10px}.gear{right:16px!important;bottom:66px!important}.unified{width:calc(100vw - 28px)}}
