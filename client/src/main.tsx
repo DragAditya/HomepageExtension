@@ -16,7 +16,7 @@ const shortcutIcon=(s:Shortcut)=>{if(s.icon)return s.icon; if(icons[s.name])retu
 const mediaDb=()=>new Promise<IDBDatabase>((resolve,reject)=>{const r=indexedDB.open('lumen-media',1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
 const saveMedia=async(file:File)=>{const db=await mediaDb();await new Promise<void>((resolve,reject)=>{const t=db.transaction('files','readwrite');t.objectStore('files').put(file,'background');t.oncomplete=()=>resolve();t.onerror=()=>reject(t.error)})};
 const loadMedia=async()=>{try{const db=await mediaDb();return await new Promise<Blob|null>((resolve,reject)=>{const r=db.transaction('files').objectStore('files').get('background');r.onsuccess=()=>resolve(r.result||null);r.onerror=()=>reject(r.error)})}catch{return null}};
-const base64url=(bytes:ArrayBuffer|Uint8Array)=>{const arr=bytes instanceof Uint8Array?bytes:new Uint8Array(bytes);return btoa(String.fromCharCode(...arr)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')};
+const base64url=(bytes:ArrayBuffer|Uint8Array)=>{const arr=bytes instanceof Uint8Array?bytes:new Uint8Array(bytes);return btoa(String.fromCharCode(...Array.from(arr))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')};
 const createPkce=async()=>{const raw=crypto.getRandomValues(new Uint8Array(64));const verifier=base64url(raw);const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(verifier));return {verifier,challenge:base64url(digest)}};
 
 function App(){
