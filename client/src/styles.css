@@ -17,3 +17,13 @@
 .gear{opacity:.78!important;bottom:72px!important;right:22px!important;z-index:30!important}.gear:hover,.gear.visible{opacity:1!important}
 .drawer{z-index:20!important}.scrim{z-index:19!important}
 @media(max-width:760px){.drawer{width:min(92vw,410px);right:10px}.gear{right:16px!important;bottom:66px!important}.unified{width:calc(100vw - 28px)}}
+
+/* Reference-matched central composition: wide capsule, generous breathing room, cinematic mono labels. */
+.hero{width:min(1320px,calc(100vw - 120px));transform:translate(-50%,-42%)}
+.state-label{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.48em;color:#bcc7e2;text-align:center;margin:0 0 34px;text-transform:uppercase}
+.unified{border-radius:52px;border-width:1.5px;box-shadow:0 0 32px color-mix(in srgb,var(--accent) 16%,transparent),inset 0 1px 0 rgba(255,255,255,.05)}
+.search-row{height:104px;padding:0 34px;gap:28px}.search-row>svg{width:34px;height:34px}.search-row input{font-size:24px;font-weight:300}.engine{height:54px;padding-left:28px;padding-right:18px}.engine select{font-size:20px}.engine svg{width:21px;height:21px}.shortcut{padding:15px 22px;font-size:20px}
+.player.show{max-height:170px;padding:20px 34px 26px;gap:28px}.album{width:108px;height:108px;border-radius:16px}.track-meta{width:245px;gap:8px}.track-meta strong{font-size:25px}.track-meta span{font-size:20px}.track-meta small{font-size:17px}.track-meta i{width:13px;height:13px}.progress{min-width:190px}.rail{height:8px}.progress>div:last-child{margin-top:10px;font-size:16px}.icon-btn{width:45px;height:52px}.icon-btn svg{width:31px;height:31px}.play-btn{width:68px;height:68px}.play-btn svg{width:31px;height:31px}.spotify-mark{font-size:43px;margin-left:auto}
+.shortcuts{margin-top:34px}.shortcut-tile span{width:86px;height:82px;border-radius:20px}.shortcut-tile label{font-size:14px}
+.drawer{width:min(448px,calc(100vw - 24px));padding:30px 26px}
+@media(max-width:960px){.hero{width:calc(100vw - 48px)}.search-row{height:82px;padding:0 24px;gap:16px}.search-row input{font-size:17px}.engine select{font-size:15px}.shortcut{font-size:15px;padding:11px 15px}.player.show{gap:14px;padding:14px 22px 18px}.album{width:70px;height:70px}.track-meta{width:170px}.track-meta strong{font-size:16px}.track-meta span{font-size:14px}.track-meta small{font-size:12px}.play-btn{width:54px;height:54px}.state-label{font-size:11px;margin-bottom:20px}}
