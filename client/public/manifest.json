@@ -7,6 +7,5 @@
   "host_permissions": ["https://api.spotify.com/*", "https://accounts.spotify.com/*", "https://www.google.com/*", "https://icons.duckduckgo.com/*", "https://favicone.com/*", "<all_urls>"],
   "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:;" },
   "chrome_url_overrides": { "newtab": "index.html" },
-  "action": { "default_title": "Lumen" },
-  "oauth2": { "scopes": ["user-read-currently-playing", "user-read-playback-state", "user-modify-playback-state"] }
+  "action": { "default_title": "Lumen" }
 }
